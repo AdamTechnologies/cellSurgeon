@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Gabarito&display=swap');
+    h1{
+        font-family: 'Gabarito', cursive;
+    }   
+     h3{
+        font-family: 'Gabarito', cursive;
+    }
+
+    .form-container{
+        background-color: #ed1c24;
+        padding: 16px;
+        color: white !important;
+        border-radius: 10px;
+    }
+    .btn-primary{
+        background-color: rgb(0, 0, 0) !important;
+    }
+    .ancorColor{
+        color: blue !important;
+    }
+    .bgContainer {
+    background-image: url('images/bgBanner.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-top: 12%;
+    /* object-fit: cover; */
+    /* background-attachment: fixed; */
+    /* Other background properties */
+  }
+  .text-center{
+    /* margin-top: 20% !important; */
+    /* padding-top: 5% !important; */
+  }
+  .bannerInner{
+    background-color: black;
+    width: auto;
+    padding: 20px;
+    border: 7px solid #ed1c24;
+    opacity: 0.8;
+  }
+  .bg-dark{
+    background-color: #eeeeee !important;
+  }
+  .cardHead{
+    color: #ed1c24;
+    border-bottom: 1px solid #ed1c2351;
+    padding-bottom: 24px;
+  }
+  .cardTextColor{
+    color: #000000;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  .aboutDesign{
+    background-color: #303030;
+    color: white;
+    border-radius: 8px;
+  }
+  .textColor{
+    color: #ffffff;
+    font-size: 13px;
+
+  }
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+  p{
+    font-family: 'Gabarito', cursive;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .footer{
+    background-color: #1c1c1c;
+    color: white;
+    padding: 30px !important;
+  }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand"  href="#"><img src="images/logo.jpeg"> </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#home">HOME <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services">OUR SERVICES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#courses">COURSES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">CONTACT</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container" id="home">
+  <div class="row">
+    <div class="col-sm-4">
+        <div class="form-container">
+          <h3>Enquire Now</h3><br />
+          <form id="registrationForm" data-toggle="validator" data-focus="false">
+            <div class="form-group">
+                <!-- <label class="control-label" for="rname">Complete name</label> <br /> -->
+                <input type="text" class="form-control" id="rname" name="rname" required placeholder="Name">
+                <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group">
+                <!-- <label class="control-label" for="remail">Email address</label> <br /> -->
+                <input type="email" class="form-control" id="remail" name="remail" required placeholder="E-mail">
+                <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group">
+                <!-- <label class="control-label" for="rphone">Phone number</label> <br /> -->
+                <input type="text" class="form-control" id="rphone" name="rphone" required placeholder="Mobile">
+                <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="rterms" value="Agreed-to-Terms" name="rterms" required>
+                <label class="form-check-label" for="rterms">I've read and agree to Corso's written <a class="ancorColor" href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html"  class="ancorColor" >Terms & Conditions</a></label>
+                <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group text-right">
+                <button type="submit" class="btn btn-primary">REGISTER</button>
+            </div>
+            <div class="form-message">
+                <div id="rmsgSubmit" class="h3 text-center hidden"></div>
+            </div>
+        </form>
+        
+    </div>
+    </div>
+    <div class="col-sm-8 bgContainer form-container">
+        <div class="text-center"> <!-- Center-align the contents -->
+            <div class="bannerInner">
+                <h1>Get Your Phone Back to Life</h1>
+                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p> -->
+            </div>
+
+        </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-4">
+
+        <div class="card bg-dark text-white">
+            <div class="card-body">
+                <h3 class="cardHead">Advanced</h3>
+                <p class="cardTextColor">We are committed to providing cutting-edge education in mobile device repair.  </p>
+                <p class="cardTextColor">Our courses utilize the latest advancements in technology to ensure that our students receive the most up-to-date and relevant training available.</p>
+            </div>
+          </div>
+
+      </div>
+      <div class="col-sm-4">
+        <div class="card bg-dark text-white">
+            <div class="card-body">
+                <h3 class="cardHead">Assured</h3>
+                <p class="cardTextColor">Assured training is a specialized approach to teaching mobile repair courses. </p>
+                <p class="cardTextColor">It focuses on providing students with a guarantee or assurance of competency and skill acquisition. In the context of mobile repair courses</p>
+            </div>
+          </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card bg-dark text-white">
+            <div class="card-body">
+                <h3 class="cardHead">Reliable</h3>
+                <p class="cardTextColor">We prioritize the reliable training methods when teaching mobile repair courses.</p>
+                <p class="cardTextColor"> Our commitment to reliability ensures that our students receive consistent, high-quality instruction that prepares them for success.</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+    <div class="container mt-5 aboutDesign" id="about">
+        <div class="row">
+            <div class="col-sm-12 py-4">
+                <h3 class="cardHead">~ABOUT</h3>
+                <p class="mt-4 textColor">
+                In the rapidly evolving world of mobile phone technology, Cell Surgeons has established itself as a pioneering force in Kozhikode. Over the past decade, we have played a pivotal role in introducing the next generation of Kozhikode residents to the field of mobile phone repair. Our mission has been to make mobile phone repairs accessible and efficient by harnessing the power of cutting-edge technology and providing state-of-the-art infrastructure.
+                
+                 Rapid Advancements in Mobile Technology: The world of mobile phones is marked by constant innovation and rapid advancements. Keeping pace with these changes, Cell Surgeons has continuously updated its knowledge and skills to provide top-notch repair services. We understand that as technology evolves, so do the challenges and opportunities in mobile repair.
+                
+                 Empowering the New Generation: We take pride in nurturing the talent of the new generation in Kozhikode. By offering training and hands-on experience in mobile phone repair, we empower young individuals with valuable skills and knowledge that can set them on a path to success in this dynamic field.
+                
+                 Utilizing Cutting-Edge Technology: Cell Surgeons believes in the power of technology to drive progress. We leverage the latest repair technologies and techniques to diagnose and fix mobile phone issues efficiently and effectively. Our commitment to staying updated ensures that our customers receive the best repair solutions available.
+                </p>
+            </div>
+
+            <div class="col-sm-6 py-0">
+                <h3 class="cardHead">~VISION</h3>
+                <p class="mt-4 textColor">
+                At our repair center, we have a clear and inspiring vision: to shape a world where individuals no longer need to stress over smartphone issues. Our commitment is rooted in delivering prompt, trustworthy, and cost-effective solutions to all our customers. Let's delve deeper into what this vision entails.<br /><br />
+
+                1. Worry-Free Smartphone Experience: Our ultimate goal is to eliminate the anxiety and inconvenience that often accompanies smartphone problems. We envision a world where smartphone users can enjoy their devices without the constant concern of technical glitches, hardware failures, or software issues.<br /><br />
+
+                2. Swift Solutions: Speed is of the essence when it comes to smartphone repairs. We are dedicated to providing swift solutions to our customers' problems. Whether it's a cracked screen, a malfunctioning battery, or a software bug, we aim to resolve these issues quickly so that users can return to their digital lives without prolonged disruptions.<br /><br />
+
+                3. Reliability: In our vision, reliability is non-negotiable. Customers should have complete confidence in the quality of our repairs and services. We strive to build trust by consistently delivering effective solutions that stand the test of time. Our commitment to reliability extends to the components we use, the expertise of our technicians, and the durability of our repairs.
+                </p>
+            </div>
+
+            <div class="col-sm-6 py-0">
+                <h3 class="cardHead">~MISSION</h3>
+                <p class="mt-4 textColor">
+                At our repair center, our mission is underpinned by a strong commitment to sustainability, environmental responsibility, and customer satisfaction. Let's delve into the various facets of our mission<br /><br />
+
+                1. Extending Smartphone Lifespan: Our primary objective is to prolong the lifespan of your smartphones. We believe that the value of a device extends beyond its purchase date, and with the right repairs and maintenance, smartphones can serve their users for an extended period. By addressing issues such as cracked screens, battery problems, software glitches, and hardware malfunctions, we ensure that your devices continue to function optimally.<br /><br />
+
+                2. Skilled Repairs: Central to our mission is the expertise of our skilled technicians. We take pride in the proficiency of our repair specialists who are adept at diagnosing and fixing a wide range of smartphone issues. Their expertise ensures that your device is in capable hands, and repairs are conducted with precision and care.<br /><br />
+                
+                3. Promoting Sustainability: We are dedicated to promoting sustainability in the tech industry. Electronic waste, including discarded smartphones, is a growing environmental concern. By repairing and refurbishing smartphones, we actively contribute to reducing electronic waste. This aligns with global efforts to minimize the environmental impact of consumer electronics.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5" id="services">
+        <h2 class="mb-4">Why choose us</h2>
+        <div class="row">
+          <div class="col-sm-4 mb-4 mb-4">    
+            <div class="card">
+                <img class="card-img-top" src="https://i.pinimg.com/564x/22/25/3d/22253dddea000d301e40df2410372161.jpg" alt="Card image" style="width:100%; height: 260px;">
+                <div class="card-body">
+                  <h4 class="card-title">Genuine parts</h4>
+                  <p class="card-text">We provide original and quality parts</p>
+                </div>
+              </div>
+    
+          </div>
+          <div class="col-sm-4 mb-4">
+            <div class="card">
+                <img class="card-img-top" src="https://img.etimg.com/thumb/msid-58424793,width-650,height-488,imgsize-52874,,resizemode-75/.jpg" alt="Card image" style="width:100%" >
+                <div class="card-body">
+                  <h4 class="card-title">All brands & models</h4>
+                  <p class="card-text">Familiar with all brands</p>
+                </div>
+              </div>
+          </div>
+    
+          <div class="col-sm-4 mb-4">
+            <div class="card">
+                <img class="card-img-top" src="https://img.etimg.com/thumb/msid-103611398,width-300,height-225,imgsize-40488,,resizemode-75/mobile-manufacturing.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                  <h4 class="card-title">Waranty services</h4>
+                  <p class="card-text">All type of warrenty services</p>
+                </div>
+              </div>
+          </div>
+
+          <div class="col-sm-4 mb-4">    
+            <div class="card">
+                <img class="card-img-top" src="https://www.advance-mobile-repairing-institute.in/img/smartphone-mobile-repairing-course.jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                  <h4 class="card-title">Advanced training</h4>
+                  <p class="card-text">Training with latest equipments</p>
+                </div>
+              </div>
+    
+          </div>
+          <div class="col-sm-4 mb-4">    
+            <div class="card">
+                <img class="card-img-top" src="https://fixexperts.in/wp-content/uploads/2021/06/fixexperts.jpeg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                  <h4 class="card-title">Expert technition</h4>
+                  <p class="card-text">10+ experienced technitions</p>
+                </div>
+              </div>
+    
+          </div>
+          <div class="col-sm-4 mb-4">    
+            <div class="card">
+                <img class="card-img-top" src="https://www.nccoe.nist.gov/sites/default/files/styles/712x534_webp/public/2021-09/iStock-1174418677.jpg.webp?itok=FXdZGlDJ" alt="Card image" style="width:100%">
+                <div class="card-body">
+                  <h4 class="card-title">Data security</h4>
+                  <p class="card-text">100% security we offer</p>
+                </div>
+              </div>
+    
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="container mt-0">
+        <h2 class="mb-4">Our Services</h2>
+        <div class="row">
+          <div class="col-sm-12 mb-4">  
+            <div id="demo" class="carousel slide" data-ride="carousel">
+
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                  <li data-target="#demo" data-slide-to="0" class="active"></li>
+                  <li data-target="#demo" data-slide-to="1"></li>
+                  <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+                
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="images/repair.png" alt="Los Angeles" width="100%" height="500">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/androidRepair.jpg" alt="Chicago" width="100%" height="500">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/repairCourse.jpg" alt="New York" width="100%" height="500">
+                  </div>
+                </div>
+                
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </a>
+              </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container mt-3" id="courses">
+        <h2>▶️IPHONE & ANDROID ADVANCED COURSES◀️</h2>
+       
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">📱ANDROID</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#menu1">📲iPhone</a>
+          </li>
+
+        </ul>
+      
+        <!-- Tab panes -->
+        <div class="tab-content border mb-3">
+          <div id="home" class="container tab-pane active"><br>
+            <h3>🗺️Real exclusive syllabus (high level hidden tricks on schematics that leads maximum level of repairing). 3333 BA</h3>
+            ✅Live - (single- dual layer, white & black pasted IC'S) tricks to removing, cleaning, reballing, replacing. 
+            ☑️Live-usb flashing & unlocking 
+            ✅ Easyjtag ufi programming 
+            ☑️ Live-ISP, SPI, socket unlocking & re-programming developer knowledge 
+            🏞️Schematic diagram of detailed diagnosing
+            ⚙️Complete components functional knowledge 
+            🧑🏻‍🔧Practical cold test & hot test - pull up & pull down circuits 
+            📝Detailed explanation about primary & secondary line
+            ✅ Explaining easy way for full short, half, semi short & much more 
+            🔋⚡Changing section-(OVP, NTC, fake charging, all ch errors & much more get voltage divider thermistor (NTC) errors fixing by voltage divider concept)
+            🔗Network section-(DRX, PRX, APT, ET, QPT, 4G, 5G, WIFI, BT& much more) 
+            📌Buck, boost, VDD, VBAT, VBUS, VSYS, VREG, LDO, VSN, VSP, SPMI, VLDOmore circuits& much 
+            📌🥪12C, 125, 13C, MISO, MOSI, SPI, RFFE, MIPI, DSI, CSI, GPIO, INT, RST, CABC, & much more all section deep fault finding knowledge we teach (sandwitch) dual layer CPU & PCB
+          </div>
+          <div id="menu1" class="container tab-pane fade"><br>
+            <h3>✅Explain the structure of the iphone (internal/external / motherboard)
+                ⚙️Explain the iphone motherboard ICS and the problems caused by the damage of each motherboard IC </h3>
+                ☑️ How to use itunes and solve system problems
+                🧑🏻‍⚖️How to judge the failure point of intermittent machine  error report and benchmark analysis of restart data 
+                🛠️the use and introduction of tools 
+                ✅Disassembly/assembly and reballing of ic with glues 
+                📌Ic disassembling / assembling and reballing without glues
+                👁️How to jumper (microsoldering)
+                🔗How to use ZXW/WXNJI/ BORNEO repair software
+                ⚙️How to use a multimeter to detect problems 
+                ⬆️How to upgrade memory 
+                🪪The practical theoretical knowledge of face id.
+                🛠️Face id dot projector repair with jc repair tools cable solution
+                🧑🏻Face id flood illuminator repair
+                📷Face id front camera repair 
+                📌Face id dot projector repair with jc tools cable solution
+                ✅Different detail solutions with dot chip or flex
+                📝Explanation of the baseband circuit principle 
+                ☑️Diagnosis of the baseband circuit 
+                🔶Common faults of the baseband circute 
+                ⚙️CPU reinstall A8 A16
+                🔋Display and battery error msg solution 
+                ⚙️🍎Solutions for all iphone problems  
+                🥾Boot sequence with DC 
+                ✅12c spi mipi uart decoding 
+                📈Tracing lines 
+                🔍Finding short circits 
+                ✅BORNIO WUXINJI ZXWusing
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container mt-5" id="contact">
+        <h2 class="mb-4">Contact us</h2>
+        <div class="row">
+            <div class="col-sm-6"> 
+                <table width="100%">
+                    <tr class="py-4">
+                        <td> <img src="images/cLogo.jpeg" alt="Chicago"></td>
+                        <td><br /><br />+91 9633190054<br /><br /><br /></td>
+                    </tr>
+                    <tr class="py-4">
+                        <td> <img src="images/emailLogo.jpeg" alt="Chicago"></td>
+                        <td><br /><br />calicutcellsurgeons@gmail.com<br /><br /><br /></td>
+                    </tr>
+                    <tr class="py-4">
+                        <td> <img src="images/maoLogo.jpeg" alt="Chicago"></td>
+                        <td><br /><br />Mavoor road, first floor land ship mall road bank calicut<br /><br /><br /></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-sm-6"> 
+                <img class="img-fluid" src="images/contacts.jpeg" alt="Chicago">
+
+            </div>
+        </div>
+        </div>
+
+        <div class="container footer">
+            <h2 class="mb-4">Contact us</h2>
+            <div class="row">
+                <div class="col-sm-3">
+                <img src="images/foterLogo.png" alt="Chicago">
+                <table>
+                    <tr>
+                        <td><a href="https://www.facebook.com/cellsurgeons1"> <img src="images/fbLogo.jpg" alt="Chicago"></a></td>
+                        
+                        <td><a  href="whatsapp://send?phone=1234567890&text=Hello%20from%20WhatsApp!" target="_blank"><img src="images/whatsappLogo.jpg" alt="Chicago"></a></td>
+                        
+                        <td><a href="https://www.instagram.com/cell_surgeons/"><img src="images/instaLogo.jpg" alt="Chicago"></a></td>
+                        
+                    </tr>
+                </table>
+                </div>
+                <div class="col-sm-3"> 
+                <img src="images/footerLink1.jpeg" alt="Chicago">
+                </div>
+                <div class="col-sm-3"> 
+                <img src="images/footerLink2.jpeg" alt="Chicago">
+                </div>
+                <div class="col-sm-3"> 
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15652.15744078751!2d75.7837984!3d11.2585149!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba6593778a43f27%3A0xd612d3dfb1dbb815!2z4LS44LWG4LW9IOC0uOC1vOC0nOC0qOC1geC0leC1vg!5e0!3m2!1sml!2sin!4v1696589124049!5m2!1sml!2sin" width="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+
+
+
+
+      <script>
+        $(document).ready(function(){
+          $(".nav-tabs a").click(function(){
+            $(this).tab('show');
+          });
+          $('.nav-tabs a').on('shown.bs.tab', function(event){
+            var x = $(event.target).text();         // active tab
+            var y = $(event.relatedTarget).text();  // previous tab
+            $(".act span").text(x);
+            $(".prev span").text(y);
+          });
+        });
+        </script>
+
+</body>
+</html>
